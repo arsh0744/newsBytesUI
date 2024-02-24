@@ -1,0 +1,73 @@
+
+
+
+  <!--Main Navigation-->
+<header>
+
+    <style>
+      #intro {
+        background-image: url("https://mdbootstrap.com/img/new/fluid/city/018.jpg");
+        height: 100vh;
+      }
+  
+      /* Height for devices larger than 576px */
+      @media (min-width: 992px) {
+        #intro {
+          margin-top: -58.59px;
+        }
+      }
+  
+      .navbar .nav-link.active {
+        color: #fff !important;
+        transition-duration: 1s;
+      }
+    </style>
+  
+    <!-- Navbar -->
+    <nav class="  navbar navbar-expand-lg navbar-dark d-flex d-lg-block" style="z-index: 2000;">
+      
+        <div class="container-fluid">
+        <!-- Navbar brand -->
+    
+        <button class="navbar-toggler" type="button" data-mdb-collapse-init data-mdb-target="#navbarExample01"
+                aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item " >
+                <a class="nav-link active" aria-current="page" routerLink="/dashboard" id="dashboard">Dashboard</a>
+              </li>
+            <li class="nav-item " >
+              <a class="nav-link" aria-current="page" routerLink="/addUrl" id="addUrl">Add URL</a>
+            </li>
+            <li class="nav-item" >
+              <a class="nav-link" routerLink="/history"  id="history">History</a>
+            </li>
+          </ul>
+  
+          <ul class="navbar-nav d-flex flex-row">
+        
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    
+ <div id="intro" class="bg-image shadow-2-strong"  >
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.8);">
+      <div class="container d-flex align-items-center justify-content-center text-center h-100">
+        <router-outlet >
+    
+        </router-outlet>
+      
+      
+        
+      </div>
+    </div>
+  </div>
+  
+   
+  </header>
+  <!--Main Navigation-->

@@ -1,0 +1,100 @@
+<!-- <form [formGroup]="urlForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="url">Long URL:</label>
+      <input type="text" class="form-control" id="url" formControlName="url" placeholder="Enter long URL">
+    </div>
+    <div class="form-group">
+      <label>Basic UTM Codes:</label>
+      <div class="form-group">
+        <label for="source">Source:</label>
+        <input type="text" class="form-control" id="source" formControlName="source">
+      </div>
+      <div class="form-group">
+        <label for="medium">Medium:</label>
+        <input type="text" class="form-control" id="medium" formControlName="medium">
+      </div>
+      <div class="form-group">
+        <label for="campaign">Campaign:</label>
+        <input type="text" class="form-control" id="campaign" formControlName="campaign">
+      </div>
+      <div class="form-group">
+        <label for="term">Term:</label>
+        <input type="text" class="form-control" id="term" formControlName="term">
+      </div>
+      <div class="form-group">
+        <label for="content">Content:</label>
+        <input type="text" class="form-control" id="content" formControlName="content">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="custom">Custom UTM Codes:</label>
+      <input type="text" class="form-control" id="custom" formControlName="custom">
+    </div>
+    <button type="submit" class="btn btn-primary">Generate Hashed URL</button>
+  </form>
+  <div *ngIf="hashedUrl" class="alert alert-success mt-3">
+    <strong>Hashed URL:</strong> <a [href]="hashedUrl" target="_blank">{{hashedUrl}}</a>
+  </div> -->
+
+<div  id="formContainer w-100" style="width: 40rem;">
+    <div class="card" >
+        <div class="card-header"><h2>URL Hashing System</h2></div>
+        <div class="card-body">
+            <form [formGroup]="urlForm" (ngSubmit)="onSubmit()" > 
+
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input mdbValidate  type="text" id="form1Example1" class="form-control" formControlName="url"/>
+                  <label   class="form-label" for="form1Example1" >URL:</label>
+                </div>
+              
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="form1Example2" class="form-control" formControlName="source" />
+                  <label class="form-label" for="form1Example2">Source:</label>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="text" id="form1Example3" class="form-control" formControlName="medium" />
+                    <label class="form-label" for="form1Example3">Medium:</label>
+                  </div>
+
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="text" id="form1Example4" class="form-control" formControlName="campaign" />
+                    <label class="form-label" for="form1Example4">Campaign:</label>
+                  </div>
+
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="text" id="form1Example5" class="form-control" formControlName="term" />
+                    <label class="form-label" for="form1Example5">Term:</label>
+                  </div>
+
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="text" id="form1Example6" class="form-control" formControlName="content" />
+                    <label class="form-label" for="form1Example6">Content:</label>
+                  </div>
+              
+            
+                <button data-mdb-ripple-init type="submit"  [disabled]="!urlForm.valid"
+                class="btn btn-primary btn-block">Generate Hashed URL</button>
+              </form>
+        </div>
+
+        <div class="card-footer text-muted">
+
+          <div *ngIf="hashedUrl" class="alert alert-success mt-3">
+            <strong>Hashed URL:</strong> <a [href]="hashedUrl" target="_blank">{{hashedUrl}}</a>
+            <input type="text" class="form-control mt-2" [value]="hashedUrl" readonly>
+          </div>
+
+        </div>
+
+     
+
+
+      </div>
+    
+</div>
+
+
+
+

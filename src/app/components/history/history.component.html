@@ -1,0 +1,25 @@
+<div  id="formContainer w-100" style="width: 60rem;">
+
+    <div class="row" style="margin-top: 1rem;">
+        <div class="col-sm-3" *ngFor="let url of urls;let i=index" > 
+            <div class="card pt-2 md-3"   >
+                <div class="card-header"><h2>URL {{i+1}}</h2></div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ url.longUrl }}</h5>
+                    <p class="card-text">Clicks: {{ url.clicks }}</p>
+                    <p class="card-text">Source: {{ url.source }}</p>
+                    <a href="{{baseUrl}}/{{url.longUrl}}/hashes/{{url.hash}}" class="btn btn-primary" target="_blank">Visit</a>
+
+         
+                
+                </div>
+              </div>
+        </div>
+    </div>
+
+
+
+
+ 
+    
+</div>
